@@ -1,6 +1,6 @@
 # FakeInventories [![](https://jitpack.io/v/IWareQ/FakeInventories.svg)](https://jitpack.io/#IWareQ/FakeInventories)
 
-FakeInventories is a simple library plugin for PowerNukkit/Nukkit Minecraft Bedrock core, that will help you to create
+FakeInventories is a simple library plugin for Nukkit-MOT Minecraft Bedrock core, that will help you to create
 your custom virtual inventories with ease.
 
 ##### [Download](https://github.com/IWareQ/FakeInventories/releases)
@@ -25,7 +25,7 @@ inventory.addItems((item, event) -> {
     
     target.sendMessage("is custom item handler in addItem method");
     
-    target.removeWindow(inventory);
+    inventory.close(target); // new option to avoid bug that can't open GUI again
 }, Item.get(Item.IRON_BLOCK), Item.get(Item.IRON_BAR))
 
 inventory.setItem(5, Item.get(Item.DIAMOND), (item, event) -> {
@@ -35,7 +35,7 @@ inventory.setItem(5, Item.get(Item.DIAMOND), (item, event) -> {
 
     target.sendMessage("is custom item handler");
 
-    target.removeWindow(inventory);
+    inventory.close(target); // new option to avoid bug that can't open GUI again
 });
 
 player.addWindow(inventory);
