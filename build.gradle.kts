@@ -9,10 +9,11 @@ repositories {
     mavenCentral()
     maven("https://repo.opencollab.dev/maven-releases")
     maven("https://repo.opencollab.dev/maven-snapshots")
+    maven("https://repo.lanink.cn/repository/maven-public/")
 }
 
 dependencies {
-    implementation("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    implementation("cn.nukkit:Nukkit:MOT-SNAPSHOT")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
